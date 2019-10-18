@@ -14,23 +14,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @Viewport("width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes")
-public class BasicTemplate extends Div implements RouterLayout, BeforeEnterObserver {
-    private static final Logger LOG = LoggerFactory.getLogger(BasicTemplate.class);
+public class BasicTemplate extends Div implements RouterLayout {
+	private static final Logger LOG = LoggerFactory.getLogger(BasicTemplate.class);
 
-    public BasicTemplate() {
+	public BasicTemplate() {
 
-    }
+	}
 
-    @Override
-    public void showRouterLayoutContent(HasElement content) {
-        getElement().appendChild(content.getElement());
-    }
-
-    @Override
-    public void beforeEnter(BeforeEnterEvent beforeEnterEvent) {
-        UserInfo userInfo = beforeEnterEvent.getUI().getSession().getAttribute(UserInfo.class);
-        if (userInfo == null) {
-            beforeEnterEvent.rerouteTo(LoginPage.class);
-        }
-    }
+	@Override
+	public void showRouterLayoutContent(HasElement content) {
+		getElement().appendChild(content.getElement());
+	}
 }

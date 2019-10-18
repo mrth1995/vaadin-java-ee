@@ -37,6 +37,7 @@ public class LoginPage extends Div {
 				loginForm.setError(true);
 			}
 		});
+		add(loginForm);
 	}
 
 	private void navigateToHome() {
