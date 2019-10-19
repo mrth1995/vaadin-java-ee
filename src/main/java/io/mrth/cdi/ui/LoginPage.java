@@ -6,6 +6,7 @@ import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.login.LoginForm;
 import com.vaadin.flow.router.Route;
 import io.mrth.cdi.model.UserInfo;
+import io.mrth.cdi.service.UserAuthService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
