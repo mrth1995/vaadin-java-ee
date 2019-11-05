@@ -19,7 +19,6 @@ public class BasicTemplate extends Div implements RouterLayout {
 	private static final Logger LOG = LoggerFactory.getLogger(BasicTemplate.class);
 
 	public BasicTemplate() {
-
 	}
 
 	@Override

@@ -1,19 +1,19 @@
 package io.mrth.cdi.ui;
 
 import com.vaadin.cdi.annotation.RouteScoped;
+import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Label;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
 import javax.annotation.PostConstruct;
 
+@Route(value = "tenant", layout = MainTemplate.class)
 @RouteScoped
-@Route(value = "", layout = MainTemplate.class)
-public class HomePage extends VerticalLayout {
+public class TenantPage extends Div {
 
 	@PostConstruct
 	public void init() {
-		Label label = new Label("Home");
-		add(label);
+		Label title = new Label("tenant");
+		add(title);
 	}
 }
